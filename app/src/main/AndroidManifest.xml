@@ -22,6 +22,7 @@
         <activity android:name=".PickParkingActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".PickTimeActivity"
+            android:theme="@style/NoActionBar"
             android:screenOrientation="portrait"/>
         <activity android:name=".PaymentActivity"
             android:screenOrientation="portrait"/>
