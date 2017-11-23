@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="white">#cccccc</color>
+
 
     <color name="colorDarkBackground">#19272f</color>
     <color name="colorHighlighedtext">#fdfc38</color>
