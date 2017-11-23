@@ -44,6 +44,14 @@ public class PickTimeActivity extends AppCompatActivity implements TimeDialogFra
                 timeDialogFragment.show(getSupportFragmentManager(), "MainActivity.TimeDialog");
             }
         });
+
+        mPaymentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PickTimeActivity.this, PaymentActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

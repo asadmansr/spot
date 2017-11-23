@@ -8,4 +8,8 @@
     <color name="colorDarkBackground">#19272f</color>
     <color name="colorHighlighedtext">#fdfc38</color>
     <color name="colorDefaultText">#c6c6c6</color>
+
+    <color name="black">#000000</color>
+    <color name="pureWhite">#FFFFFF</color>
+    <color name="faded">#FFFFFF</color>
 </resources>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Spot</string>
+    <string name="greeting">Thode Parking Lot</string>
+    <string name="insert_ticket_to_add_or_refund_time">Insert Ticket to Add/Refund Time</string>
+    <string name="add_or_refund_time">Add or Refund Time</string>
+    <string name="copyright">Spot Parking Services © 2017</string>
+    <string name="refundTime">Refund Time</string>
 </resources>

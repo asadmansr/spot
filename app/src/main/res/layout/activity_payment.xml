@@ -7,14 +7,6 @@
     android:background="@color/colorDarkBackground"
     tools:context="com.spotapp.spot.PaymentActivity">
 
-    <Button
-        android:id="@+id/next_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Go to next screen"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"
-        android:background="@color/colorAccent" />
+
 
 </RelativeLayout>

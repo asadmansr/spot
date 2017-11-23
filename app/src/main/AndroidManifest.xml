@@ -25,6 +25,7 @@
             android:theme="@style/NoActionBar"
             android:screenOrientation="portrait"/>
         <activity android:name=".PaymentActivity"
+            android:theme="@style/NoActionBar"
             android:screenOrientation="portrait"/>
         <activity android:name=".EditTicketActivity"
             android:screenOrientation="portrait"/>
