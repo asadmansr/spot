@@ -25,7 +25,7 @@ public class PickTimeActivity extends AppCompatActivity implements TimeDialogFra
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_time);
 
-        getSupportActionBar().setTitle("Select a Time");
+        getSupportActionBar().setTitle("Select the End Time");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 

@@ -26,7 +26,7 @@ public class TimeDialogFragment extends DialogFragment {
         timePicker = (TimePicker) v.findViewById(R.id.dialog_time_picker);
         return new android.support.v7.app.AlertDialog.Builder(getActivity())
                 .setView(v)
-                .setPositiveButton(android.R.string.ok,
+                .setPositiveButton("Save",
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

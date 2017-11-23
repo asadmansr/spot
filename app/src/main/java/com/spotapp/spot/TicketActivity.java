@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class TicketActivity extends AppCompatActivity {
 
@@ -13,7 +15,10 @@ public class TicketActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ticket);
 
-        FloatingActionButton doneButton = (FloatingActionButton) findViewById(R.id.done_button);
+        getSupportActionBar().setTitle("Ticket");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Button doneButton = (Button) findViewById(R.id.return_btn);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -21,5 +26,17 @@ public class TicketActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

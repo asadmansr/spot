@@ -7,119 +7,402 @@
     android:background="@color/colorDarkBackground"
     tools:context="com.spotapp.spot.PaymentActivity">
 
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/cash_cv"
-        android:layout_marginRight="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="36dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="Pay by Cash"/>
-        </RelativeLayout>
-        
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/debit_cv"
-        android:layout_below="@id/cash_cv"
-        android:layout_marginRight="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="36dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="Pay by Debit"/>
-
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/credit_cv"
-        android:layout_below="@id/debit_cv"
-        android:layout_marginRight="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="36dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <RelativeLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/credit_title_rl"
-                android:layout_margin="16dp">
+                android:layout_centerHorizontal="true"
+                android:id="@+id/total_cost_tv"
+                android:text="Total cost: $9.00"
+                android:textColor="@color/colorHighlighedtext"
+                android:textSize="24sp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="16dp" />
 
 
-                <TextView
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/cash_cv"
+                android:layout_below="@id/total_cost_tv"
+                android:layout_marginRight="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="Pay by Credit"/>
+                    android:layout_height="wrap_content">
 
-            </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/cash_title_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp">
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/credit_title_rl">
 
-                <TextView
-                    android:id="@+id/card_number_tv"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+
+                            android:text="Pay by Cash"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:id="@+id/cash_rl"
+                        android:layout_below="@id/cash_title_rl">
+
+                        <TextView
+                            android:id="@+id/cash_acceptable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Acceptable type of payment: $0.25, $1, $2, $5, $10, $20."
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cash_acceptable"
+                            android:layout_margin="16dp"
+                            android:layout_alignParentRight="true"
+                            android:text="Pay with Cash"
+                            android:textColor="#AFB42B"
+                            />
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/debit_cv"
+                android:layout_below="@id/cash_cv"
+                android:layout_marginRight="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Card Number"
-                    android:layout_marginLeft="16dp" />
+                    android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/card_number_et"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_below="@id/card_number_tv" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/debit_title_rl"
+                        android:layout_margin="16dp">
 
 
-            </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:text="Pay by Debit"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/debit_rl"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/debit_title_rl">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cardholder Name"
+                            android:layout_marginLeft="16dp"
+                            android:id="@+id/debit_name_tv"
+                            android:layout_alignParentTop="true"
+                            />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_below="@id/debit_name_tv"
+                            android:id="@+id/debit_name_et"
+                            android:inputType="textPersonName"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/debit_card_number_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/debit_name_et"
+                            android:text="Card Number"
+                            android:layout_marginLeft="16dp" />
+
+                        <EditText
+                            android:id="@+id/debit_card_number_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:inputType="number"
+                            android:maxLength="16"
+                            android:layout_below="@id/debit_card_number_tv" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/debit_card_number_et"
+                            android:orientation="horizontal"
+                            android:id="@+id/debit_ll"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:text="Exp. Date"
+                                    android:id="@+id/exp_date_id"
+                                    />
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:hint="MM/YY"
+                                    android:layout_below="@id/exp_date_id"
+                                    android:inputType="date"
+                                    android:maxLength="5"
+                                    />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:hint="CVV"
+                                    android:visibility="invisible"
+                                    />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/debit_ll"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="24dp"
+                            android:text="Checkout"
+                            android:textColor="#AFB42B"
+                            />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/credit_cv"
+                android:layout_below="@id/debit_cv"
+                android:layout_marginRight="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="36dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/credit_title_rl"
+                        android:layout_margin="16dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+
+                            android:text="Pay by Credit"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/credit_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@id/credit_title_rl">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cardholder Name"
+                            android:layout_marginLeft="16dp"
+                            android:id="@+id/name_tv"
+                            android:layout_alignParentTop="true"
+                            />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_below="@id/name_tv"
+                            android:id="@+id/name_et"
+                            android:inputType="textPersonName"
+
+                            />
+
+
+                        <TextView
+                            android:id="@+id/card_number_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/name_et"
+                            android:text="Card Number"
+                            android:layout_marginLeft="16dp" />
+
+                        <EditText
+                            android:id="@+id/card_number_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:maxLength="16"
+                            android:inputType="number"
+                            android:layout_below="@id/card_number_tv" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/card_number_et"
+                            android:orientation="horizontal"
+                            android:id="@+id/ll"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:text="Exp. Date"
+                                    android:id="@+id/credit_exp_date_id"
+                                    />
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:hint="MM/YY"
+                                    android:layout_below="@id/credit_exp_date_id"
+                                    android:inputType="date"
+                                    android:maxLength="5"
+                                    />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:text="CVV"
+                                    android:id="@+id/cvv_id"
+                                    />
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_below="@id/cvv_id"
+                                    android:inputType="number"
+                                    android:hint="000"
+                                    android:maxLength="3"
+                                    />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ll"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="24dp"
+                            android:text="Checkout"
+                            android:textColor="#AFB42B"
+
+                            />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
 
         </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-
-
+    </ScrollView>
 </RelativeLayout>
