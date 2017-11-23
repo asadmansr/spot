@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,18 +18,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LaunchActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".PickParkingActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".PickTimeActivity"
-            android:theme="@style/NoActionBar"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".PaymentActivity"
-            android:theme="@style/NoActionBar"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".EditTicketActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".LaunchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PickParkingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PickTimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".PaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".EditTicketActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".TicketActivity"></activity>
     </application>
 
 </manifest>

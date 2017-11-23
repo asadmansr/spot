@@ -5,24 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/NoActionBar"
+    android:background="@drawable/background"
     android:theme = "@style/NoActionBar"
     tools:context="com.spotapp.spot.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:scaleType="center"
-        app:srcCompat="@drawable/background" />
-
     <TextView
+        android:id="@+id/spot_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="12dp"
-        android:layout_margin="12dp"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="4dp"
+        android:textColor="#c6c6c6"
         android:text="@string/copyright" />
 
     <TextView
@@ -31,8 +28,10 @@
         android:textSize="64dp"
         android:layout_margin="32dp"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:text="@string/greeting" />
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/app_name" />
 
     <Button
         android:id="@+id/next_btn"
@@ -40,9 +39,9 @@
         android:layout_height="wrap_content"
         android:text="@string/insert_ticket_to_add_or_refund_time"
         android:background="@drawable/buttondrawable"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorAccent"
+        android:layout_above="@id/spot_tv"
         android:layout_margin="16dp" />
 
     <Button
@@ -56,5 +55,7 @@
         android:text="Park your car"
         android:layout_alignLeft="@+id/next_btn"
         android:layout_alignRight="@+id/next_btn" />
+
+
 
 </RelativeLayout>

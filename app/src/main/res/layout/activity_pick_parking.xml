@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background"
+    android:background="@color/colorDarkBackground"
     android:weightSum="2"
     tools:context="com.spotapp.spot.PickParkingActivity">
 
@@ -14,6 +14,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
         android:layout_height="448dp"
         android:layout_above="@+id/layout2"
         android:layout_weight="1"

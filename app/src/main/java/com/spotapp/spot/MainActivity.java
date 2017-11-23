@@ -14,6 +14,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        try {
+            getSupportActionBar().hide();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
         final Button button = (Button) findViewById(R.id.next_btn);
         button.setOnClickListener(this);
 
